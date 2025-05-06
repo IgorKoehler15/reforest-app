@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios - ReflorestApp</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="reports">
+    <nav class="main-nav">
+        <ul>
+            <li><a href="dashboard.html">Home</a></li>
+            <li><a href="register.html">Cadastrar Ação</a></li>
+            <li><a href="profile.html">Meu Perfil</a></li>
+            <li><a href="reports.html">Relatórios</a></li>
+            <li><a href="rankings.html">Destaques</a></li>
+            <li><button id="logoutBtn">Sair</button></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Relatórios de Reflorestamento</h1>
+        
+        <div class="report-filters">
+            <form id="reportForm">
+                <div class="filter-group">
+                    <label for="userFilter">Usuário:</label>
+                    <input type="text" id="userFilter" placeholder="Filtrar por usuário">
+                </div>
+                
+                <div class="filter-group">
+                    <label for="treeFilter">Tipo de Árvore:</label>
+                    <select id="treeFilter">
+                        <option value="">Todos os tipos</option>
+                        <option value="Ipê">Ipê</option>
+                        <option value="Angico">Angico</option>
+                        <option value="Aroeira">Aroeira</option>
+                        <option value="Jequitibá">Jequitibá</option>
+                        <option value="Peroba do Campo">Peroba do Campo</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="dateFrom">De:</label>
+                    <input type="date" id="dateFrom">
+                </div>
+                
+                <div class="filter-group">
+                    <label for="dateTo">Até:</label>
+                    <input type="date" id="dateTo">
+                </div>
+                
+                <button type="submit">Filtrar</button>
+                <button type="button" id="resetFilters">Limpar Filtros</button>
+            </form>
+        </div>
+        
+        <div class="report-results">
+            <h2>Resultados</h2>
+            <div class="summary">
+                <p>Total de registros: <span id="totalRecords">0</span></p>
+                <p>Total de árvores: <span id="totalTrees">0</span></p>
+            </div>
+            
+            <table id="reportTable">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Usuário</th>
+                        <th>Tipo</th>
+                        <th>Quantidade</th>
+                        <th>Local</th>
+                    </tr>
+                </thead>
+                <tbody id="reportData">
+                    <!-- Dados serão inseridos via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="js/reports.js"></script>
+</body>
+</html>

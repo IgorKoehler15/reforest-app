@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReflorestApp - Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="dashboard">
+    <nav class="main-nav">
+        <ul>
+            <li><a href="dashboard.html">Home</a></li>
+            <li><a href="register.html">Cadastrar Ação</a></li>
+            <li><a href="profile.html">Meu Perfil</a></li>
+            <li><a href="reports.html">Relatórios</a></li>
+            <li><a href="rankings.html">Destaques</a></li>
+            <li><button id="logoutBtn">Sair</button></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Bem-vindo ao ReflorestApp</h1>
+        <div class="user-stats">
+            <div class="avatar-container">
+                <img id="userAvatar" src="" alt="Avatar">
+            </div>
+            <div class="stats-info">
+                <h2 id="usernameDisplay"></h2>
+                <p>Árvores plantadas: <span id="treesPlanted">0</span></p>
+            </div>
+        </div>
+        
+        <section class="quick-actions">
+            <a href="register.html" class="action-btn">Cadastrar Nova Ação</a>
+            <a href="reports.html" class="action-btn">Ver Relatórios</a>
+        </section>
+        
+        <section class="recent-activity">
+            <h2>Atividades Recentes</h2>
+            <div id="activityList"></div>
+        </section>
+    </main>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

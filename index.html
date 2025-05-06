@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReflorestApp - Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>ReflorestApp</h1>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Usuário" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+            <button type="button" id="registerBtn">Cadastrar</button>
+        </form>
+    </div>
+
+    <div class="register-modal" id="registerModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Cadastro</h2>
+            <form id="registerForm">
+                <input type="text" id="newUsername" placeholder="Usuário" required>
+                <input type="password" id="newPassword" placeholder="Senha" required>
+                <input type="text" id="bio" placeholder="Bio (opcional)">
+                
+                <h3>Escolha sua árvore avatar:</h3>
+                <div class="tree-options">
+                    <div class="tree-option" data-tree="pau-brasil">
+                        <img src="assets/pau-brasil-seed.png" alt="Pau-Brasil">
+                        <p>Pau-Brasil</p>
+                    </div>
+                    <div class="tree-option" data-tree="castanheira">
+                        <img src="assets/castanheira-seed.png" alt="Castanheira">
+                        <p>Castanheira</p>
+                    </div>
+                    <div class="tree-option" data-tree="peroba-rosa">
+                        <img src="assets/peroba-rosa-seed.png" alt="Peroba-Rosa">
+                        <p>Peroba-Rosa</p>
+                    </div>
+                </div>
+                <input type="hidden" id="selectedTree">
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - ReflorestApp</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="profile">
+    <nav class="main-nav">
+        <ul>
+            <li><a href="dashboard.html">Home</a></li>
+            <li><a href="register.html">Cadastrar Ação</a></li>
+            <li><a href="profile.html">Meu Perfil</a></li>
+            <li><a href="reports.html">Relatórios</a></li>
+            <li><a href="rankings.html">Destaques</a></li>
+            <li><button id="logoutBtn">Sair</button></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1> Meu Perfil</h1>
+        
+        <div class="profile-container">
+            <div class="profile-header">
+                <div class="avatar-container">
+                    <img id="profileAvatar" src="" alt="Avatar">
+                </div>
+                <div class="profile-info">
+                    <h2 id="profileUsername"></h2>
+                    <p class="tree-counter">Árvores plantadas: <span id="profileTreesPlanted">0</span></p>
+                    <div class="progress-bar">
+                        <div id="progressLevel" class="progress-level"></div>
+                    </div>
+                    <p class="next-level">Próximo estágio em: <span id="treesToNextLevel">100</span> árvores</p>
+                </div>
+            </div>
+            
+            <div class="profile-bio">
+                <h3>Bio</h3>
+                <p id="currentBio"></p>
+                <textarea id="editBio" style="display: none;"></textarea>
+                <button id="editBioBtn">Editar Bio</button>
+                <button id="saveBioBtn" style="display: none;">Salvar</button>
+            </div>
+            
+            <div class="achievements">
+                <h3>Conquistas</h3>
+                <div class="badges-container" id="badgesContainer"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>

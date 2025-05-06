@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destaques - ReflorestApp</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="rankings">
+    <nav class="main-nav">
+        <ul>
+            <li><a href="dashboard.html">Home</a></li>
+            <li><a href="register.html">Cadastrar Ação</a></li>
+            <li><a href="profile.html">Meu Perfil</a></li>
+            <li><a href="reports.html">Relatórios</a></li>
+            <li><a href="rankings.html">Destaques</a></li>
+            <li><button id="logoutBtn">Sair</button></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Top Reflorestadores</h1>
+        
+        <div class="rankings-container">
+            <div class="rankings-header">
+                <p>Estes são os usuários que mais contribuíram com o reflorestamento!</p>
+            </div>
+            
+            <div class="top-users" id="topUsers">
+                <!-- Dados serão inseridos via JavaScript -->
+            </div>
+            
+            <div class="user-position">
+                <h2>Sua Posição</h2>
+                <div id="userRank">
+                    <!-- Posição do usuário atual será inserida aqui -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/rankings.js"></script>
+</body>
+</html>

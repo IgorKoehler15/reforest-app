@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Ação - ReflorestApp</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="register-action">
+    <nav class="main-nav">
+            <ul>
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="register.html">Cadastrar Ação</a></li>
+                <li><a href="profile.html">Meu Perfil</a></li>
+                <li><a href="reports.html">Relatórios</a></li>
+                <li><a href="rankings.html">Destaques</a></li>
+                <li><button id="logoutBtn">Sair</button></li>
+            </ul>    
+    </nav>
+
+    <main>
+        <h1>Cadastrar Ação de Reflorestamento</h1>
+        
+        <form id="plantingForm">
+            <div class="form-group">
+                <label for="treeType">Tipo de Árvore:</label>
+                <select id="treeType" required>
+                    <option value="">Selecione...</option>
+                    <option value="Ipê">Ipê</option>
+                    <option value="Angico">Angico</option>
+                    <option value="Aroeira">Aroeira</option>
+                    <option value="Jequitibá">Jequitibá</option>
+                    <option value="Peroba do Campo">Peroba do Campo</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="quantity">Quantidade:</label>
+                <input type="number" id="quantity" min="1" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="date">Data:</label>
+                <input type="date" id="date" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="location">Local (opcional):</label>
+                <input type="text" id="location">
+            </div>
+            
+            <div class="form-group">
+                <label for="notes">Observações (opcional):</label>
+                <textarea id="notes"></textarea>
+            </div>
+            
+            <button type="submit">Cadastrar Ação</button>
+        </form>
+    </main>
+
+    <script src="js/register.js"></script>
+</body>
+</html>

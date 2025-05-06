@@ -1,0 +1,505 @@
+/* Estilos base */
+:root {
+    --pau-brasil-color: #8B0000;
+    --castanheira-color: #8B4513;
+    --peroba-rosa-color: #DB7093;
+    --light-color: #f4f4f4;
+    --dark-color: #333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    transition: background-color 0.3s ease;
+}
+
+/* Temas */
+body.pau-brasil {
+    --primary-color: var(--pau-brasil-color);
+    --secondary-color: #A52A2A;
+}
+
+body.castanheira {
+    --primary-color: var(--castanheira-color);
+    --secondary-color: #A0522D;
+}
+
+body.peroba-rosa {
+    --primary-color: var(--peroba-rosa-color);
+    --secondary-color: #C71585;
+}
+
+/* Navegação */
+.main-nav {
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav li {
+    margin-right: 1rem;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover {
+    background-color: var(--secondary-color);
+}
+
+.main-nav button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.4rem rem;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.main-nav button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Login */
+.login-container {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    background-color: var(gray);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Modal de cadastro */
+.register-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    margin: 5% auto;
+    padding: 2rem;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.tree-options {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+.tree-option {
+    cursor: pointer;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.tree-option.selected {
+    border-color: var(--primary-color);
+}
+
+.tree-option img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* Dashboard */
+.user-stats {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-container img {
+    width: 100px;
+    height: 100px;
+    margin-right: 1rem;
+}
+
+.quick-actions {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.action-btn {
+    flex: 1;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.recent-activity {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.activity-item {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* Formulários */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    min-height: 100px;
+}
+
+button[type="submit"] {
+    background-color: var(gray);
+    color: black;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Estilos para Perfil */
+.profile-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.avatar-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 2rem;
+    border: 5px solid var(--primary-color);
+}
+
+.profile-info h2 {
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-color);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.progress-level {
+    height: 100%;
+    background-color: var(--primary-color);
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+.profile-bio {
+    margin: 2rem 0;
+    padding: 1rem;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-bio h3 {
+    color: var(--primary-color);
+}
+
+/* Estilos para Conquistas */
+.achievements {
+    margin-top: 2rem;
+}
+
+.badges-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.badge {
+    flex: 1;
+    min-width: 150px;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.badge.earned {
+    border: 2px solid var(--primary-color);
+}
+
+.badge.locked {
+    opacity: 0.6;
+    border: 2px dashed #ccc;
+}
+
+.badge img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para Relatórios */
+.report-filters {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.filter-group {
+    margin-bottom: 1rem;
+}
+
+.report-results {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.summary {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.summary p {
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Estilos para Destaques */
+.rankings-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-users {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.top-user {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.user-position {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.rank-card {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.rank-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-right: 2rem;
+    min-width: 60px;
+    text-align: center;
+}
+
+.rank-user {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.rank-user .user-avatar img {
+    width: 80px;
+    height: 80px;
+    margin-right: 1.5rem;
+}
+
+.rank-user .user-info {
+    text-align: left;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .avatar-container {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .top-users {
+        flex-direction: column;
+    }
+    
+    .rank-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .rank-number {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .rank-user {
+        flex-direction: column;
+    }
+    
+    .rank-user .user-avatar img {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
